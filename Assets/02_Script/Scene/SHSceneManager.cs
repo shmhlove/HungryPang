@@ -143,12 +143,15 @@ public class SHSceneManager : SHSingleton<SHSceneManager>
     // 유틸 : 씬 이동 실행
     void ExcuteGoTo(eSceneType eType)
     {
-        if (true == IsNeedLoading(eType))
-            LoadScene(eSceneType.Loading, null);
-        else
-            LoadScene(eType, null);
+        PlayFadeIn(() =>
+        {
+            if (true == IsNeedLoading(eType))
+                LoadScene(eSceneType.Loading, (bIsSuccess) => PlayFadeOut(null));
+            else
+                LoadScene(eType, (bIsSuccess) => PlayFadeOut(null));
+        });
     }
-    
+
     // 유틸 : 씬 로드 ( Change 방식 : GoTo 명령시 호출됨 )
     AsyncOperation LoadScene(eSceneType eType, Action<bool> pComplate)
     {
@@ -185,7 +188,7 @@ public class SHSceneManager : SHSingleton<SHSceneManager>
         return m_pEventToChangeScene.Contains(pAction);
     }
 
-    // 유틸 : 씬 변경될때 알려달라고 한 곳에 알려주자
+    // 유틸 : 씬 변경이 시작될때 알려달라고 한 곳에 알려주자
     void SendCallback(eSceneType eCurrent, eSceneType eChange)
     {
         SHUtils.ForToList(m_pEventToChangeScene, (pAction) =>
@@ -216,6 +219,24 @@ public class SHSceneManager : SHSingleton<SHSceneManager>
         m_pHistory.Add(new SHSceneHistory(m_eCurrentScene, eType));
         m_eBeforeScene  = m_eCurrentScene;
         m_eCurrentScene = eType;
+    }
+
+    // 유틸 : 페이드 인
+    void PlayFadeIn(Action pCallback)
+    {
+        if (false == Single.UI.Show("Panel - FadeIn", pCallback))
+        {
+            pCallback();
+        }
+    }
+
+    // 유틸 : 페이드 아웃
+    void PlayFadeOut(Action pCallback)
+    {
+        if (false == Single.UI.Show("Panel - FadeOut", pCallback))
+        {
+            pCallback();
+        }
     }
     #endregion
 }

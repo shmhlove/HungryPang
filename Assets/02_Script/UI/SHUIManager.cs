@@ -10,11 +10,13 @@ public partial class SHUIManager : SHSingleton<SHUIManager>
     [ReadOnlyField][SerializeField] private DicPanels m_dicPanels = new DicPanels();
     #endregion
 
+
     #region Virtual Functions
     public override void OnInitialize()
     {
         SetDontDestroy();
         Single.Scene.AddEventToChangeScene(OnEventToChangeScene);
+        SHGameObject.SetParent(Single.Resource.GetGameObject("UI Root - Global"), gameObject);
     }
     public override void OnFinalize()
     {
@@ -40,29 +42,45 @@ public partial class SHUIManager : SHSingleton<SHUIManager>
             m_dicPanels[pPanel.name] = pPanel;
         else
             m_dicPanels.Add(pPanel.name, pPanel);
+
+        pPanel.SetActive(false);
     }
-    public void Show(string strName, params object[] pArgs)
+    public bool Show(string strName, params object[] pArgs)
     {
         var pPanel = GetPanel(strName);
         if (null == pPanel)
         {
             Debug.LogErrorFormat("Show() - No Exist Panel(Name : {0})", strName);
-            return;
+            return false;
         }
 
         pPanel.Initialize();
         pPanel.Show(pArgs);
+        return true;
     }
-    public void Close(string strName)
+    public bool Close(string strName)
     {
         var pPanel = GetPanel(strName);
         if (null == pPanel)
         {
             Debug.LogErrorFormat("Close() - No Exist Panel(Name : {0})", strName);
-            return;
+            return false;
         }
 
         pPanel.Close();
+        return true;
+    }
+    public bool IsExistPanel(string strName)
+    {
+        return (null != GetPanel(strName));
+    }
+    public Transform GetRootToGlobal()
+    {
+        return SHUIRoot_Global.GetRoot();
+    }
+    public Transform GetRootToScene()
+    {
+        return SHUIRoot_Scene.GetRoot();
     }
     #endregion
 
