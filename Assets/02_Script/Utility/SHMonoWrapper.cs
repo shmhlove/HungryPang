@@ -27,11 +27,15 @@ public class SHMonoWrapper : MonoBehaviour
     }
     public virtual void Start()
     {
-        StopAllCoroutines();
+        
     }
     public virtual void OnDisable()
     {
         StopAllCoroutines();
+    }
+    public virtual void OnDestroy()
+    {
+
     }
     #endregion
 

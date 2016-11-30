@@ -26,7 +26,7 @@ public class SHUIBasePanel : SHMonoWrapper
 
 
     #region Interface Functions
-    public void Initialize()
+    public void Initialize(bool bIsActive)
     {
         if (eObjectDestoryType.Never == m_eDestroyType)
             SHGameObject.SetParent(transform, Single.UI.GetRootToGlobal());
@@ -34,11 +34,11 @@ public class SHUIBasePanel : SHMonoWrapper
             SHGameObject.SetParent(transform, Single.UI.GetRootToScene());
 
         SetLocalScale(Vector3.one);
-        SetActive(true);
+        SetActive(bIsActive);
     }
     public void Show(params object[] pArgs)
     {
-        Initialize();
+        Initialize(true);
         OnBeforeShow(pArgs);
         PlayAnimation(m_pAnimToOpen, ()=> 
         {

@@ -30,7 +30,7 @@ public partial class SHUIManager : SHSingleton<SHUIManager>
 
 
     #region Interface Functions
-    public void AddPanel(SHUIBasePanel pPanel)
+    public void AddPanel(SHUIBasePanel pPanel, bool bIsActive)
     {
         if (null == pPanel)
         {
@@ -43,7 +43,7 @@ public partial class SHUIManager : SHSingleton<SHUIManager>
         else
             m_dicPanels.Add(pPanel.name, pPanel);
 
-        pPanel.SetActive(false);
+        pPanel.Initialize(bIsActive);
     }
     public bool Show(string strName, params object[] pArgs)
     {
@@ -53,8 +53,7 @@ public partial class SHUIManager : SHSingleton<SHUIManager>
             Debug.LogErrorFormat("Show() - No Exist Panel(Name : {0})", strName);
             return false;
         }
-
-        pPanel.Initialize();
+        
         pPanel.Show(pArgs);
         return true;
     }
@@ -90,7 +89,7 @@ public partial class SHUIManager : SHSingleton<SHUIManager>
     {
         if (false == m_dicPanels.ContainsKey(strName))
         {
-            AddPanel(Single.Resource.GetObjectComponent<SHUIBasePanel>(strName));
+            AddPanel(Single.Resource.GetObjectComponent<SHUIBasePanel>(strName), false);
         }
 
         if (false == m_dicPanels.ContainsKey(strName))

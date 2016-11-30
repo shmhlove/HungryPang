@@ -169,15 +169,22 @@ public class SHSceneManager : SHSingleton<SHSceneManager>
     // 유틸 : 씬 로드 후 처리를 위한 코루틴 등록
     AsyncOperation SetLoadPostProcess(Action<bool> pComplate, AsyncOperation pAsyncInfo)
     {
-        Single.Coroutine.Async((bIsSuccess) =>
+        if (null == pAsyncInfo)
         {
-            if (false == bIsSuccess)
-                Debug.LogError(string.Format("씬 로드 실패!!(SceneType : {0})", GetCurrentScene()));
+            Debug.LogError(string.Format("씬 로드 실패!!(SceneType : {0})", GetCurrentScene()));
 
             if (null != pComplate)
-                pComplate(bIsSuccess);
-        },
-        pAsyncInfo);
+                pComplate(false);
+        }
+        else
+        {
+            Single.Coroutine.Async(() =>
+            {
+                if (null != pComplate)
+                    pComplate(true);
+            },
+            pAsyncInfo);
+        }
 
         return pAsyncInfo;
     }
@@ -203,9 +210,6 @@ public class SHSceneManager : SHSingleton<SHSceneManager>
     // 유틸 : 씬 변경시 처리해야할 하드한 작업들
     void PerformanceToChangeScene(eSceneType eCurrent, eSceneType eChange)
     {
-        // 전역 코루틴 모두 제거
-        Single.Coroutine.DoDestroy();
-
         // 씬 변경 이벤트 콜
         SendCallback(eCurrent, eChange);
 
@@ -226,8 +230,11 @@ public class SHSceneManager : SHSingleton<SHSceneManager>
     {
         if (false == Single.UI.Show("Panel - FadeIn", pCallback))
         {
-            pCallback();
+            if (null != pCallback)
+                pCallback();
         }
+
+        SHCoroutine.Instance.NextUpdate(() => Single.UI.Close("Panel - FadeOut"));
     }
 
     // 유틸 : 페이드 아웃
@@ -235,8 +242,11 @@ public class SHSceneManager : SHSingleton<SHSceneManager>
     {
         if (false == Single.UI.Show("Panel - FadeOut", pCallback))
         {
-            pCallback();
+            if (null != pCallback)
+                pCallback();
         }
+
+        SHCoroutine.Instance.NextUpdate(() => Single.UI.Close("Panel - FadeIn"));
     }
     #endregion
 }

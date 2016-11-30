@@ -16,7 +16,7 @@ public class SHUIRoot_Global : MonoBehaviour
         var pPanels = gameObject.GetComponentsInChildren<SHUIBasePanel>();
         SHUtils.ForToArray(pPanels, (pPanel) =>
         {
-            Single.UI.AddPanel(pPanel);
+            Single.UI.AddPanel(pPanel, false);
         });
 
         m_pRoot   = transform;

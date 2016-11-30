@@ -13,7 +13,7 @@
 			"s_FileName": "Panel - FadeOut.prefab",
 			"s_Extension": ".prefab",
 			"s_Size": "12776",
-			"s_Hash": "E92B0396DA326B97C48BCD9A2D52CBF4",
+			"s_Hash": "D1A10768F6A390940DC1AE8F951D36BC",
 			"s_Path": "Prefab/UI/Panel - FadeOut"
 		},
 		{
@@ -28,8 +28,8 @@
 			"s_Name": "UI Root - Global",
 			"s_FileName": "UI Root - Global.prefab",
 			"s_Extension": ".prefab",
-			"s_Size": "10772",
-			"s_Hash": "666E2E6321271F76AB3B1A3055E06DFD",
+			"s_Size": "10312",
+			"s_Hash": "F1EC28C9EA91FE25D92C975E1993EEC3",
 			"s_Path": "Prefab/UI/UI Root - Global"
 		}
 	]
