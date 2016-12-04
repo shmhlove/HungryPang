@@ -1,0 +1,14 @@
+﻿1>------ 모두 다시 빌드 시작: 프로젝트: UnityVS.GameOn.CSharp.Plugins, 구성: Debug Any CPU ------
+1>  UnityVS.GameOn.CSharp.Plugins -> D:\WorkSpace\NaverSVN\S2Function\trunk\GameOn\Temp\UnityVS_bin\Debug\Assembly-CSharp-firstpass.dll
+2>------ 모두 다시 빌드 시작: 프로젝트: UnityVS.GameOn.CSharp, 구성: Debug Any CPU ------
+2>D:\WorkSpace\NaverSVN\S2Function\trunk\GameOn\Assets\Framework\Script\Data\ResourcesData\S2ResourcesData.cs(221,9,221,15): warning CS0162: 접근할 수 없는 코드가 있습니다.
+2>D:\WorkSpace\NaverSVN\S2Function\trunk\GameOn\Assets\Framework\Script\InGame\GameEngine\Unit\UI\S2UIUnit.cs(54,21,54,26): error CS0103: 'pInfo' 이름이 현재 컨텍스트에 없습니다.
+2>D:\WorkSpace\NaverSVN\S2Function\trunk\GameOn\Assets\Framework\Script\InGame\GameEngine\Unit\UI\S2UIUnit.cs(57,9,57,14): error CS0103: 'pInfo' 이름이 현재 컨텍스트에 없습니다.
+2>D:\WorkSpace\NaverSVN\S2Function\trunk\GameOn\Assets\IGSoft_Tools\FXMakerReplayScene\FxmReplayDemo.cs(50,16,50,48): warning CS0618: 'UnityEngine.Transform.GetChildCount()'은(는) 사용되지 않습니다. 'use Transform.childCount instead.'
+2>D:\WorkSpace\NaverSVN\S2Function\trunk\GameOn\Assets\IGSoft_Tools\FXMakerReplayScene\FxmReplayDemo.cs(51,12,51,44): warning CS0618: 'UnityEngine.Transform.GetChildCount()'은(는) 사용되지 않습니다. 'use Transform.childCount instead.'
+2>D:\WorkSpace\NaverSVN\S2Function\trunk\GameOn\Assets\NGUI\Scripts\UI\UILabel.cs(898,7,898,40): warning CS0618: 'UnityEngine.Font.textureRebuildCallback'은(는) 사용되지 않습니다. 'Font.textureRebuildCallback has been deprecated. Use Font.textureRebuilt instead.'
+2>D:\WorkSpace\NaverSVN\S2Function\trunk\GameOn\Assets\NGUI\Scripts\UI\UILabel.cs(905,10,905,43): warning CS0618: 'UnityEngine.Font.textureRebuildCallback'은(는) 사용되지 않습니다. 'Font.textureRebuildCallback has been deprecated. Use Font.textureRebuilt instead.'
+2>D:\WorkSpace\NaverSVN\S2Function\trunk\GameOn\Assets\NGUI\Scripts\UI\UILabel.cs(918,6,918,39): warning CS0618: 'UnityEngine.Font.textureRebuildCallback'은(는) 사용되지 않습니다. 'Font.textureRebuildCallback has been deprecated. Use Font.textureRebuilt instead.'
+3>------ 모두 다시 빌드 시작: 프로젝트: UnityVS.GameOn.CSharp.Editor, 구성: Debug Any CPU ------
+3>CSC : error CS0006: 'D:\WorkSpace\NaverSVN\S2Function\trunk\GameOn\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll' 메타데이터 파일을 찾을 수 없습니다.
+========== 모두 다시 빌드: 성공 1, 실패 2, 생략 0 ==========

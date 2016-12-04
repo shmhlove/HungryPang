@@ -1,0 +1,57 @@
+{
+    // 기본문법1 : { Field }
+    "RootNode1": {
+        "IntField": 1,
+        "FloatField": 1.1,
+        "StringField": "SampleJson1",
+        "ArrayField": [ [ 1, 1 ], [ 1, 1 ] ]
+    },
+
+    // 기본문법2 : [ { Field }, { Field } ]
+    "RootNode2": [
+        {
+            "IntField": 2,
+            "FloatField": 2.2,
+            "StringField": "SampleJson2",
+            "ArrayField": [ [ 2, 2 ], [ 2, 2 ] ]
+        },
+        {
+            "IntField": 2,
+            "FloatField": 2.2,
+            "StringField": "SampleJson2",
+            "ArrayField": [ [ 2, 2 ], [ 2, 2 ] ]
+        }
+    ],
+
+    // 기본문법3 : [ [ { Field }, { Field } ], [ { Field }, { Field } ] ]
+    "RootNode3": [
+        [
+            {
+                "IntField": 3,
+                "FloatField": 3.3,
+                "StringField": "SampleJson3",
+                "ArrayField": [ [ 3, 3 ], [ 3, 3 ] ]
+            },
+            {
+                "IntField": 3,
+                "FloatField": 3.3,
+                "StringField": "SampleJson3",
+                "ArrayField": [ [ 3, 3 ], [ 3, 3 ] ]
+            }
+        ],
+        [
+            {
+                "IntField": 3,
+                "FloatField": 3.3,
+                "StringField": "SampleJson3",
+                "ArrayField": [ [ 3, 3 ], [ 3, 3 ] ]
+            },
+            {
+                "IntField": 3,
+                "FloatField": 3.3,
+                "StringField": "SampleJson3",
+                "ArrayField": [ [ 3, 3 ], [ 3, 3 ] ]
+            }
+        ]
+    ]
+}

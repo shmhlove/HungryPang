@@ -1,36 +1,195 @@
 {
-	"ResourcesList": [
+	"TableList": [
 		{
-			"s_Name": "Panel - FadeIn",
-			"s_FileName": "Panel - FadeIn.prefab",
-			"s_Extension": ".prefab",
-			"s_Size": "12776",
-			"s_Hash": "1FF0814CABB0CF1F97AF31365461C2F7",
-			"s_Path": "Prefab/UI/Panel - FadeIn"
+			"s_Sheets": "Common"
 		},
 		{
-			"s_Name": "Panel - FadeOut",
-			"s_FileName": "Panel - FadeOut.prefab",
-			"s_Extension": ".prefab",
-			"s_Size": "12776",
-			"s_Hash": "D1A10768F6A390940DC1AE8F951D36BC",
-			"s_Path": "Prefab/UI/Panel - FadeOut"
+			"s_Sheets": "InGame"
 		},
 		{
-			"s_Name": "Panel - Notice",
-			"s_FileName": "Panel - Notice.prefab",
+			"s_Sheets": "Shader"
+		}
+	],
+	"Common": [
+		{
+			"s_Name": "UI Root (2D) - Loading",
+			"s_Hash": "ACE38EF13BE982CAB0D95B31158FCB8A",
 			"s_Extension": ".prefab",
-			"s_Size": "41476",
-			"s_Hash": "6A58C75F2A6AFCCD04A69E9F1AC58858",
-			"s_Path": "Prefab/UI/Panel - Notice"
+			"s_Path": "Common/Prefab/UI/UI Root (2D) - Loading",
+			"s_ResourceType": "Prefab",
+			"s_SceneType": "Common"
+		}
+	],
+	"InGame": [
+		{
+			"s_Name": "SpineBoy",
+			"s_Hash": "473A7091100AB965D18D4785840A4D26",
+			"s_Extension": ".prefab",
+			"s_Path": "InGame/Prefab/Character/SpineBoy",
+			"s_ResourceType": "Prefab",
+			"s_SceneType": "InGame"
 		},
 		{
-			"s_Name": "UI Root - Global",
-			"s_FileName": "UI Root - Global.prefab",
+			"s_Name": "BaseDamage",
+			"s_Hash": "3DE51F697CAB4FD285B1F3D91AB64AF4",
 			"s_Extension": ".prefab",
-			"s_Size": "10312",
-			"s_Hash": "F1EC28C9EA91FE25D92C975E1993EEC3",
-			"s_Path": "Prefab/UI/UI Root - Global"
+			"s_Path": "InGame/Prefab/Damage/BaseDamage",
+			"s_ResourceType": "Prefab",
+			"s_SceneType": "InGame"
+		},
+		{
+			"s_Name": "DamageAttack",
+			"s_Hash": "EB5C5E12FC75F03274D183D5ABBEE04B",
+			"s_Extension": ".prefab",
+			"s_Path": "InGame/Prefab/Damage/DamageAttack",
+			"s_ResourceType": "Prefab",
+			"s_SceneType": "InGame"
+		},
+		{
+			"s_Name": "DamageBlue",
+			"s_Hash": "83718CCEAE87C202F5170674E38EF4AB",
+			"s_Extension": ".prefab",
+			"s_Path": "InGame/Prefab/Damage/DamageBlue",
+			"s_ResourceType": "Prefab",
+			"s_SceneType": "InGame"
+		},
+		{
+			"s_Name": "DamageGreen",
+			"s_Hash": "788752A0F8E38DB58F44FD60AC979243",
+			"s_Extension": ".prefab",
+			"s_Path": "InGame/Prefab/Damage/DamageGreen",
+			"s_ResourceType": "Prefab",
+			"s_SceneType": "InGame"
+		},
+		{
+			"s_Name": "DamageOrange",
+			"s_Hash": "ADD59E82D460170E95AC78992C3A13F9",
+			"s_Extension": ".prefab",
+			"s_Path": "InGame/Prefab/Damage/DamageOrange",
+			"s_ResourceType": "Prefab",
+			"s_SceneType": "InGame"
+		},
+		{
+			"s_Name": "DamageRed",
+			"s_Hash": "408F61DE089E46FC9D09D3B4AAE2D923",
+			"s_Extension": ".prefab",
+			"s_Path": "InGame/Prefab/Damage/DamageRed",
+			"s_ResourceType": "Prefab",
+			"s_SceneType": "InGame"
+		},
+		{
+			"s_Name": "DamageSample",
+			"s_Hash": "3A4BDE26E230A77D5C5A971354909BB9",
+			"s_Extension": ".prefab",
+			"s_Path": "InGame/Prefab/Damage/DamageSample",
+			"s_ResourceType": "Prefab",
+			"s_SceneType": "InGame"
+		},
+		{
+			"s_Name": "DamageViolet",
+			"s_Hash": "BDC0C541AF25EB223D7A541BBC3777A2",
+			"s_Extension": ".prefab",
+			"s_Path": "InGame/Prefab/Damage/DamageViolet",
+			"s_ResourceType": "Prefab",
+			"s_SceneType": "InGame"
+		},
+		{
+			"s_Name": "Dun_Sample",
+			"s_Hash": "72A57403EAA2354D2D7BAC25D8BF95E3",
+			"s_Extension": ".prefab",
+			"s_Path": "InGame/Prefab/Dungeon/Dun_Sample",
+			"s_ResourceType": "Prefab",
+			"s_SceneType": "InGame"
+		},
+		{
+			"s_Name": "EffectSample",
+			"s_Hash": "126D9DFFEF70306C764A70824FD91973",
+			"s_Extension": ".prefab",
+			"s_Path": "InGame/Prefab/Effect/EffectSample",
+			"s_ResourceType": "Prefab",
+			"s_SceneType": "InGame"
+		},
+		{
+			"s_Name": "TrailFire",
+			"s_Hash": "AEFE7DF0AF3B9DB8A2567979677F2C45",
+			"s_Extension": ".prefab",
+			"s_Path": "InGame/Prefab/Effect/TrailFire",
+			"s_ResourceType": "Prefab",
+			"s_SceneType": "InGame"
+		},
+		{
+			"s_Name": "Dragon",
+			"s_Hash": "99AD260283EC2D7051CCCC5F1E5AC239",
+			"s_Extension": ".prefab",
+			"s_Path": "InGame/Prefab/Monster/Dragon",
+			"s_ResourceType": "Prefab",
+			"s_SceneType": "InGame"
+		},
+		{
+			"s_Name": "UI HUD",
+			"s_Hash": "A46A2111FBFFF909119C84912E1A0444",
+			"s_Extension": ".prefab",
+			"s_Path": "InGame/Prefab/UI/UI HUD",
+			"s_ResourceType": "Prefab",
+			"s_SceneType": "InGame"
+		},
+		{
+			"s_Name": "UI Puzzle - Block",
+			"s_Hash": "DACEAC4DDD4D72D1FF5BD92130899624",
+			"s_Extension": ".prefab",
+			"s_Path": "InGame/Prefab/UI/UI Puzzle - Block",
+			"s_ResourceType": "Prefab",
+			"s_SceneType": "InGame"
+		},
+		{
+			"s_Name": "BlockBlue",
+			"s_Hash": "F1DB6E630FE8C0E99D63B1610B127D18",
+			"s_Extension": ".png",
+			"s_Path": "InGame/Texture/PuzzleBlock/BlockBlue",
+			"s_ResourceType": "Texture",
+			"s_SceneType": "InGame"
+		},
+		{
+			"s_Name": "BlockGreen",
+			"s_Hash": "98DEF1AC49DE6902F8D48AEC0D73B971",
+			"s_Extension": ".png",
+			"s_Path": "InGame/Texture/PuzzleBlock/BlockGreen",
+			"s_ResourceType": "Texture",
+			"s_SceneType": "InGame"
+		},
+		{
+			"s_Name": "BlockOrange",
+			"s_Hash": "C9A10F4015CC813D185D5FCC439F3FA0",
+			"s_Extension": ".png",
+			"s_Path": "InGame/Texture/PuzzleBlock/BlockOrange",
+			"s_ResourceType": "Texture",
+			"s_SceneType": "InGame"
+		},
+		{
+			"s_Name": "BlockRed",
+			"s_Hash": "EC7F9224BD3CC155376F8D0BA60FD24A",
+			"s_Extension": ".png",
+			"s_Path": "InGame/Texture/PuzzleBlock/BlockRed",
+			"s_ResourceType": "Texture",
+			"s_SceneType": "InGame"
+		},
+		{
+			"s_Name": "BlockViolet",
+			"s_Hash": "C91D36D128C9640CAF9ACCC79AF6D11A",
+			"s_Extension": ".png",
+			"s_Path": "InGame/Texture/PuzzleBlock/BlockViolet",
+			"s_ResourceType": "Texture",
+			"s_SceneType": "InGame"
+		}
+	],
+	"Shader": [
+		{
+			"s_Name": "Unlit Transparent Colored Mask",
+			"s_Hash": "3569BC51E7CE1B06F7D1C1A7692EEAA8",
+			"s_Extension": ".shader",
+			"s_Path": "Shader/Unlit Transparent Colored Mask",
+			"s_ResourceType": "None",
+			"s_SceneType": "Shader"
 		}
 	]
 }
