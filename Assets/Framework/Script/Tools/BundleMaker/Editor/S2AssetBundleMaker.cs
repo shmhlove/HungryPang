@@ -155,13 +155,13 @@ public class S2AssetBundleMaker : EditorWindow
                             if (selOptionGrid == 0)
                             {
                                 S2ExportAssetBundles.AutoMakeAssetBundle(BuildTarget.StandaloneWindows, m_iPatchVersion);
-                                S2ExportAssetBundles.AutoMakeAssetBundle(BuildTarget.iPhone, m_iPatchVersion);
+                                S2ExportAssetBundles.AutoMakeAssetBundle(BuildTarget.iOS, m_iPatchVersion);
                                 S2ExportAssetBundles.AutoMakeAssetBundle(BuildTarget.Android, m_iPatchVersion);
                             }
                             else if (selOptionGrid == 1)
                             {
                                 S2ExportAssetBundles.AutoMakeAssetBundleAsName(BuildTarget.StandaloneWindows, m_iPatchVersion);
-                                S2ExportAssetBundles.AutoMakeAssetBundleAsName(BuildTarget.iPhone, m_iPatchVersion);
+                                S2ExportAssetBundles.AutoMakeAssetBundleAsName(BuildTarget.iOS, m_iPatchVersion);
                                 S2ExportAssetBundles.AutoMakeAssetBundleAsName(BuildTarget.Android, m_iPatchVersion);
                             }
                         }
@@ -182,11 +182,11 @@ public class S2AssetBundleMaker : EditorWindow
                         {
                             if (selOptionGrid == 0)
                             {
-                                S2ExportAssetBundles.AutoMakeAssetBundle(BuildTarget.iPhone, m_iPatchVersion);
+                                S2ExportAssetBundles.AutoMakeAssetBundle(BuildTarget.iOS, m_iPatchVersion);
                             }
                             else if (selOptionGrid == 1)
                             {
-                                S2ExportAssetBundles.AutoMakeAssetBundleAsName(BuildTarget.iPhone, m_iPatchVersion);
+                                S2ExportAssetBundles.AutoMakeAssetBundleAsName(BuildTarget.iOS, m_iPatchVersion);
                             }
                         }
                         break;

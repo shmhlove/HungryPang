@@ -65,7 +65,7 @@ public class ProjectBuilder
 
         string strDate = string.Format("/{0}", DateTime.Now.ToString("yyyyMMdd"));
         string strPath = string.Format(strDirectory + strDate, PlayerSettings.bundleVersion);
-        GenericBuild(m_strScenes, strPath, BuildTarget.iPhone, pOption);
+        GenericBuild(m_strScenes, strPath, BuildTarget.iOS, pOption);
     }
 
     //------------------------- [ Android ] ---------------------------

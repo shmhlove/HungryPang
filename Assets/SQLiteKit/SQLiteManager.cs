@@ -49,7 +49,7 @@ public class SQLiteManager : MonoBehaviour
 				
 				if(instance == null)
 				{
-					instance = obj.AddComponent("SQLiteManager") as SQLiteManager;
+					instance = obj.AddComponent<SQLiteManager>() as SQLiteManager;
 				}
 				
 			}

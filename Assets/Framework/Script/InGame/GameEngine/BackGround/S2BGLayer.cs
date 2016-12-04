@@ -52,9 +52,9 @@ public partial class S2BGLayer : MonoBehaviour
     {
         foreach(S2BGTexture pTexture in m_pTextures)
         {
-            Vector2 vOffset = pTexture.renderer.material.mainTextureOffset;
+            Vector2 vOffset = pTexture.GetComponent<Renderer>().material.mainTextureOffset;
             vOffset.x += (fSpeed * m_fRelativeSpeed * 0.05f);
-            pTexture.renderer.material.mainTextureOffset = vOffset;
+            pTexture.GetComponent<Renderer>().material.mainTextureOffset = vOffset;
         }
     }
 

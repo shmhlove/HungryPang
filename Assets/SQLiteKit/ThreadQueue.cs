@@ -79,7 +79,7 @@ Don't use this function in the constructor or field initializers, instead move i
 				
 				if(instance == null)
 				{
-					instance = obj.AddComponent("ThreadQueue") as ThreadQueue;
+					instance = obj.AddComponent<ThreadQueue>() as ThreadQueue;
 				}
 				
 				initialized = true;

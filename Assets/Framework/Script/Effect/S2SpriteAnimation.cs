@@ -47,7 +47,7 @@ public class S2SpriteAnimation : MonoBehaviour
 
     void Start()
     {
-        // ±‚∫ª∞™(0) ¿Ã∏È Tile ∞πºˆ∑Œ ªÃæ∆≥ø.
+        // Í∏∞Î≥∏Í∞í(0) Ïù¥Î©¥ Tile Í∞ØÏàòÎ°ú ÎΩëÏïÑÎÉÑ.
         if( 0 == m_LoopAllFrame)
         {
             m_LoopAllFrame = m_uvTileX * m_uvTileY;
@@ -60,9 +60,9 @@ public class S2SpriteAnimation : MonoBehaviour
         m_iTileIndex = 0;
 
         m_fFirstStartTime = (m_FirstStartFrame / 30.0f) * m_TimeGap;
-        transform.renderer.enabled = false;
+        transform.GetComponent<Renderer>().enabled = false;
 
-        if (renderer == null)
+        if (GetComponent<Renderer>() == null)
         {
             enabled = false;
         }
@@ -80,8 +80,8 @@ public class S2SpriteAnimation : MonoBehaviour
         int uIndex = _iIndex % m_uvTileX;
         int vIndex = _iIndex / m_uvTileX;
         Vector2 offset = new Vector2(uIndex * m_v2TileSize.x, 1.0f - m_v2TileSize.y - vIndex * m_v2TileSize.y);
-        renderer.material.SetTextureOffset("_MainTex", offset);
-        renderer.material.SetTextureScale("_MainTex", m_v2TileSize);
+        GetComponent<Renderer>().material.SetTextureOffset("_MainTex", offset);
+        GetComponent<Renderer>().material.SetTextureScale("_MainTex", m_v2TileSize);
     }
 
     void SetSprite(bool bClampForaver)
@@ -93,21 +93,21 @@ public class S2SpriteAnimation : MonoBehaviour
 
         if (m_iTileIndex < m_LoopStartFrame )//|| m_iTileIndex > m_LoopAllFrame - m_LoopLastFrame)
         {
-            transform.renderer.enabled = false;
+            transform.GetComponent<Renderer>().enabled = false;
             return;
         }
         else
         {
-            transform.renderer.enabled = true;
+            transform.GetComponent<Renderer>().enabled = true;
             m_iTileIndex -= m_LoopStartFrame;
         }
 
 
         if (m_iTileIndex_old > m_iTileIndex)
         {
-            transform.renderer.enabled = false;
+            transform.GetComponent<Renderer>().enabled = false;
             if (bClampForaver)
-                transform.renderer.enabled = true;
+                transform.GetComponent<Renderer>().enabled = true;
             m_bLoop = false;
             return;
         }
@@ -119,7 +119,7 @@ public class S2SpriteAnimation : MonoBehaviour
         }
         else if (m_iTileIndex + m_JumpStartFrame >= m_iTotalIndex)
         {
-            transform.renderer.enabled = false;
+            transform.GetComponent<Renderer>().enabled = false;
             
         }
         

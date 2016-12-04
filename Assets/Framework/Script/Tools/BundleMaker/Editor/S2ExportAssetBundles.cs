@@ -189,7 +189,7 @@ public class S2ExportAssetBundles
                 strDeviceName = "AOS";
                 break;
 
-            case BuildTarget.iPhone:
+            case BuildTarget.iOS:
                 strDeviceName = "IOS";
                 break;
         }
@@ -272,7 +272,7 @@ public class S2ExportAssetBundles
     //static void TestCreateSceneBundleiPhone()
     //{
     //    // Make Scene Asset Bundles
-    //    MakeSceneBundle("IOS", BuildTarget.iPhone);
+    //    MakeSceneBundle("IOS", BuildTarget.iOS);
     //}
 
     //[MenuItem("S2Tools/AssetBundle/Auto Create All Asset Bundles - For PC")]
@@ -293,7 +293,7 @@ public class S2ExportAssetBundles
     //static void AutoCreateAssetBundlesForiPhone()
     //{
     //    // Make Asset Bundles
-    //    MakeAssetBundle("IOS", BuildTarget.iPhone);
+    //    MakeAssetBundle("IOS", BuildTarget.iOS);
     //}
 
     [MenuItem("S2Tools/AssetBundle/Create One AssetBundle From Just One Selection - For PC")]
@@ -314,7 +314,7 @@ public class S2ExportAssetBundles
     static void CreateAssetBundleOneResourceiPhone()
     {
         // Make One Asset Bundles
-        MakeAssetBundleOne(BuildTarget.iPhone);
+        MakeAssetBundleOne(BuildTarget.iOS);
     }
 
     public static uint BuildAssetBundleEx(BuildTarget _eBuildTarget, UnityEngine.Object parent, UnityEngine.Object[] sub, string outputPath)
@@ -365,7 +365,7 @@ public class S2ExportAssetBundles
                 strDeviceName = "AOS";
                 break;
 
-            case BuildTarget.iPhone:
+            case BuildTarget.iOS:
                 strDeviceName = "IOS";
                 break;
         }

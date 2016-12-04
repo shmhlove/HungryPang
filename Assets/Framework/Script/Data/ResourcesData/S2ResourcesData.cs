@@ -152,7 +152,7 @@ public class S2ResourcesData : S2BaseData
         }
         S2Util.Assert(pBundle.Contains(pTableData.m_strName), "{0}애셋번들에 {1}리소스가 없습니다!!!", pTableData.m_strSceneType, pTableData.m_strName);
 
-        m_dicResources.Add(pTableData.m_strName, pBundle.Load(pTableData.m_strName));
+        m_dicResources.Add(pTableData.m_strName, pBundle.LoadAsset(pTableData.m_strName));
         pDone(pTableData.m_strName, new S2LoadEndInfo(true));
     }
 
@@ -202,7 +202,7 @@ public class S2ResourcesData : S2BaseData
         if (false == pBundle.Contains(pTableData.m_strName))
             return null;
 
-        UnityEngine.Object pObject = pBundle.Load(pTableData.m_strName);
+        UnityEngine.Object pObject = pBundle.LoadAsset(pTableData.m_strName);
         if (null == pObject)
             return null;
 
@@ -239,5 +239,9 @@ public class S2ResourcesData : S2BaseData
     public Material GetMaterial(string strMaterialName)
     {
         return GetResources(strMaterialName) as Material;
+    }
+    public AudioClip GetAudioClip(string strClipName)
+    {
+        return GetResources(strClipName) as AudioClip;
     }
 }
