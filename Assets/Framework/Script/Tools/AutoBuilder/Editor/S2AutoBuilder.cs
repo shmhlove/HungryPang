@@ -34,12 +34,16 @@ public class ProjectBuilder
 
     static void GenericBuild(string[] strScenes, string strSavePath, BuildTarget pBuildTarget, BuildOptions pBuildOptions)
     {
-        EditorUserBuildSettings.SwitchActiveBuildTarget(pBuildTarget);
-        string strResult = BuildPipeline.BuildPlayer(strScenes, strSavePath, pBuildTarget, pBuildOptions);
-        if (strResult.Length > 0)
-        {
-            throw new Exception("BuildPlayer failure: " + strResult);
-        }
+        if (BuildTarget.Android == pBuildTarget)
+            EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Android, pBuildTarget);
+        if (BuildTarget.iOS == pBuildTarget)
+            EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.iOS, pBuildTarget);
+
+        var report = BuildPipeline.BuildPlayer(strScenes, strSavePath, pBuildTarget, pBuildOptions);
+        //if (strResult.Length > 0)
+        //{
+        //    throw new Exception("BuildPlayer failure: " + strResult);
+        //}
     }
 
     //------------------------- [ iOS ] ---------------------------

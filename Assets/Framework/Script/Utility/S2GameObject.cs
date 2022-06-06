@@ -75,7 +75,7 @@ public static class S2GameObject
         if (null == pRoot)
             return null;
 
-        return pRoot.FindChild(strName);
+        return pRoot.Find(strName);
     }
 
     // 하이어라키 설정

@@ -49,7 +49,7 @@ public class S2BundleSGT : S2Singleton<S2BundleSGT>
 
     public void InitCaching()
     {
-        Caching.CleanCache();
+        Caching.ClearCache();
     }
 
     public AssetBundle GetAssetBundle(string strURL)

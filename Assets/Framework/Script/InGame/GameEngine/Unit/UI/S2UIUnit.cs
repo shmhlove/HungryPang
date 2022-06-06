@@ -53,6 +53,9 @@ public class S2UIUnit : MonoBehaviour
 
     public void FixedUpdate()
     {
+        if (null == pInfo)
+            return;
+
         SetGauge(pInfo.GetHP(), pInfo.m_fMaxHP);
         switch (m_eState)
         {

@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 Shader "S2Custom/UI/Unlit Transparent Colored Mask"
 {
 	Properties
@@ -67,7 +69,7 @@ Shader "S2Custom/UI/Unlit Transparent Colored Mask"
 
 			v2f vert (appdata_t v)
 			{
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.texcoord = v.texcoord;
 				o.color = v.color;
 				return o;
